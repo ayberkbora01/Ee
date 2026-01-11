@@ -1,9 +1,123 @@
 <!DOCTYPE html>
 <html lang="tr">
 <head>
-    <meta charset="UTF-8">
-    <title>Horus Medya</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Horus Medya | BIGO LIVE Ajansı</title>
+
+<style>
+/* GENEL */
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #0b0e1a, #05070d);
+    font-family: "Segoe UI", Tahoma, sans-serif;
+    color: #fff;
+}
+
+/* BIGO LOGO */
+.bigo-logo {
+    position: fixed;
+    top: 20px;
+    right: 25px;
+    width: 90px;
+    opacity: 0.9;
+}
+
+/* ÜST BAŞLIK */
+.header {
+    text-align: center;
+    margin-top: 60px;
+}
+
+.header .top {
+    font-size: 18px;
+    letter-spacing: 4px;
+    color: #f5c76a;
+    margin-bottom: 8px;
+}
+
+.header .main {
+    font-size: 34px;
+    font-weight: 700;
+    color: #ffffff;
+    text-shadow: 0 0 25px rgba(245,199,106,0.5);
+}
+
+/* MERKEZ ALAN */
+.center {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+}
+
+/* FOTO ÇERÇEVE */
+.photo-frame {
+    padding: 10px;
+    border-radius: 16px;
+    background: linear-gradient(135deg, #f5c76a, #b8892d);
+    box-shadow: 0 0 40px rgba(245,199,106,0.45);
+}
+
+.photo-frame img {
+    display: block;
+    max-width: 420px;
+    width: 90vw;
+    height: auto;
+    border-radius: 12px;
+}
+
+/* İSİM */
+.name {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 26px;
+    font-weight: 600;
+    color: #ffffff;
+}
+
+/* UNVAN */
+.role {
+    text-align: center;
+    margin-top: 4px;
+    font-size: 14px;
+    font-style: italic;
+    color: #cfcfcf;
+}
+
+/* MOBİL */
+@media (max-width: 600px) {
+    .header .main {
+        font-size: 26px;
+    }
+    .photo-frame img {
+        max-width: 320px;
+    }
+}
+</style>
 </head>
+
 <body>
+
+<!-- BIGO LOGO -->
+<img src="bigo.png" alt="BIGO LIVE" class="bigo-logo">
+
+<!-- BAŞLIK -->
+<div class="header">
+    <div class="top">TÜRKİYE’NİN EN İYİ 2.</div>
+    <div class="main">BIGO LIVE AJANSI</div>
+</div>
+
+<!-- FOTO -->
+<div class="center">
+    <div class="photo-frame">
+        <img src="yener.jpg" alt="Yener Özbıçki">
+    </div>
+</div>
+
+<!-- İSİM -->
+<div class="name">YENER ÖZBİÇKİ</div>
+<div class="role">Ajans Sahibi</div>
+
 </body>
 </html>
