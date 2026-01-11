@@ -80,7 +80,7 @@ body {
 
 /* WHATSAPP */
 .whatsapp {
-    margin: 40px 0 60px;
+    margin: 40px 0 20px;
 }
 
 .whatsapp a {
@@ -92,6 +92,22 @@ body {
     font-weight: 600;
     border-radius: 30px;
     box-shadow: 0 0 25px rgba(37,211,102,0.6);
+}
+
+/* MÜZİK BUTONU */
+.music-btn {
+    margin-bottom: 60px;
+}
+
+.music-btn button {
+    padding: 10px 26px;
+    border-radius: 20px;
+    border: none;
+    background: rgba(255,255,255,0.12);
+    color: #fff;
+    font-size: 14px;
+    cursor: pointer;
+    backdrop-filter: blur(6px);
 }
 
 /* MOBİL */
@@ -108,7 +124,12 @@ body {
 
 <body>
 
-<!-- HORUS MEDYA LOGO -->
+<!-- ARKAPLAN MÜZİĞİ -->
+<audio id="bgMusic" autoplay loop>
+    <source src="music.mp3" type="audio/mpeg">
+</audio>
+
+<!-- LOGO -->
 <div class="logo">
     <img src="horus.png" alt="Horus Medya">
 </div>
@@ -132,9 +153,16 @@ body {
 
 <!-- WHATSAPP -->
 <div class="whatsapp">
-    <a href="https://wa.me/905316730402" target="_blank">
+    <a href="https://wa.me/905XXXXXXXXX" target="_blank">
         WhatsApp ile İletişime Geç
     </a>
+</div>
+
+<!-- MÜZİK BAŞLAT -->
+<div class="music-btn">
+    <button onclick="document.getElementById('bgMusic').play()">
+        🎵 Müziği Başlat
+    </button>
 </div>
 
 </body>
