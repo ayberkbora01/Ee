@@ -5,23 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Horus Medya | BIGO LIVE Ajansı</title>
 
-/* SABİT LOGOLAR */
-.horus-logo {
-    position: fixed;
-    top: 20px;
-    left: 25px;
-    width: 90px;
-    z-index: 999;
-    filter: drop-shadow(0 0 15px rgba(245,199,106,0.7));
-}
-
-.bigo-logo {
-    position: fixed;
-    top: 20px;
-    right: 25px;
-    width: 90px;
-    z-index: 999;
-    opacity: 0.9;
 }<style>
 /* GENEL */
 body {
@@ -116,8 +99,17 @@ body {
 
 <body>
     <!-- HORUS MEDYA LOGO -->
-<img src="horus.png" alt="Horus Medya" class="horus-logo">
-<img src="bigo.png" alt="BIGO LIVE" class="bigo-logo">
+<div style="
+position:fixed;
+top:20px;
+left:25px;
+z-index:10;
+">
+    <img src="horus.png" alt="Horus Medya"
+         style="
+         width:90px;
+         filter: drop-shadow(0 0 15px rgba(245,199,106,0.7));
+         ">
 </div>
 
 <!-- BIGO LOGO -->
