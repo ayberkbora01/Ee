@@ -16,7 +16,7 @@ body {
     text-align: center;
 }
 
-/* LOGO (SAYFAYA GÖMÜLÜ) */
+/* LOGO */
 .logo {
     margin-top: 40px;
 }
@@ -94,7 +94,7 @@ body {
     box-shadow: 0 0 25px rgba(37,211,102,0.6);
 }
 
-/* MÜZİK BUTONU */
+/* MÜZİK */
 .music-btn {
     margin-bottom: 60px;
 }
@@ -107,7 +107,6 @@ body {
     color: #fff;
     font-size: 14px;
     cursor: pointer;
-    backdrop-filter: blur(6px);
 }
 
 /* MOBİL */
@@ -124,8 +123,8 @@ body {
 
 <body>
 
-<!-- ARKAPLAN MÜZİĞİ -->
-<audio id="bgMusic" autoplay loop>
+<!-- MÜZİK -->
+<audio id="bgMusic" loop>
     <source src="music.mp3" type="audio/mpeg">
 </audio>
 
@@ -158,12 +157,20 @@ body {
     </a>
 </div>
 
-<!-- MÜZİK BAŞLAT -->
+<!-- MÜZİK BUTONU -->
 <div class="music-btn">
-    <button onclick="document.getElementById('bgMusic').play()">
-        🎵 Müziği Başlat
-    </button>
+    <button onclick="startMusic()">🎵 Müziği Başlat</button>
 </div>
+
+<script>
+function startMusic() {
+    const music = document.getElementById("bgMusic");
+    music.volume = 0.7;
+    music.play().catch(() => {
+        alert("Müzik tarayıcı tarafından engellendi, tekrar dokunun.");
+    });
+}
+</script>
 
 </body>
 </html>
