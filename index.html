@@ -6,7 +6,6 @@
 <title>Horus Medya | BIGO LIVE Ajansı</title>
 
 <style>
-/* GENEL */
 body {
     margin: 0;
     min-height: 100vh;
@@ -20,7 +19,6 @@ body {
 .logo {
     margin-top: 40px;
 }
-
 .logo img {
     width: 140px;
     filter: drop-shadow(0 0 20px rgba(245,199,106,0.6));
@@ -30,13 +28,11 @@ body {
 .header {
     margin-top: 40px;
 }
-
 .header .top {
     font-size: 16px;
     letter-spacing: 4px;
     color: #f5c76a;
 }
-
 .header .main {
     margin-top: 10px;
     font-size: 34px;
@@ -50,14 +46,12 @@ body {
     display: flex;
     justify-content: center;
 }
-
 .photo-frame {
     padding: 10px;
     border-radius: 16px;
     background: linear-gradient(135deg, #f5c76a, #b8892d);
     box-shadow: 0 0 40px rgba(245,199,106,0.45);
 }
-
 .photo-frame img {
     max-width: 420px;
     width: 90vw;
@@ -70,7 +64,6 @@ body {
     font-size: 26px;
     font-weight: 600;
 }
-
 .role {
     margin-top: 4px;
     font-size: 14px;
@@ -82,7 +75,6 @@ body {
 .whatsapp {
     margin: 40px 0 20px;
 }
-
 .whatsapp a {
     display: inline-block;
     padding: 14px 34px;
@@ -95,18 +87,11 @@ body {
 }
 
 /* MÜZİK */
-.music-btn {
-    margin-bottom: 60px;
+.music {
+    margin: 30px 0 60px;
 }
-
-.music-btn button {
-    padding: 10px 26px;
-    border-radius: 20px;
-    border: none;
-    background: rgba(255,255,255,0.12);
-    color: #fff;
-    font-size: 14px;
-    cursor: pointer;
+audio {
+    width: 260px;
 }
 
 /* MOBİL */
@@ -122,11 +107,6 @@ body {
 </head>
 
 <body>
-
-<!-- MÜZİK -->
-<audio id="bgMusic" loop>
-    <source src="music.mp3" type="audio/mpeg">
-</audio>
 
 <!-- LOGO -->
 <div class="logo">
@@ -157,20 +137,13 @@ body {
     </a>
 </div>
 
-<!-- MÜZİK BUTONU -->
-<div class="music-btn">
-    <button onclick="startMusic()">🎵 Müziği Başlat</button>
+<!-- MÜZİK (GARANTİLİ) -->
+<div class="music">
+    <audio controls>
+        <source src="music.mp3" type="audio/mpeg">
+        Tarayıcınız müzik çalmayı desteklemiyor.
+    </audio>
 </div>
-
-<script>
-function startMusic() {
-    const music = document.getElementById("bgMusic");
-    music.volume = 0.7;
-    music.play().catch(() => {
-        alert("Müzik tarayıcı tarafından engellendi, tekrar dokunun.");
-    });
-}
-</script>
 
 </body>
 </html>
